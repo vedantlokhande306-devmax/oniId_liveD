@@ -1,0 +1,6 @@
+{
+  "name": "Cyber Dino: Zero Runner",
+  "description": "An advanced cyberpunk dino runner game website featuring 60fps canvas arcade gameplay, cyber chassis upgrades, sector biomes, audio synth feedback, and persistent local storage high score leaderboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

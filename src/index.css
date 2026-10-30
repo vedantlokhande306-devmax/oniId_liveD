@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-headline: 'Space Grotesk', -apple-system, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-body: 'Geist', -apple-system, sans-serif;
+
+  --color-surface: #0f131c;
+  --color-surface-dim: #0f131c;
+  --color-surface-container-lowest: #0a0e17;
+  --color-surface-container-low: #181b25;
+  --color-surface-container: #1c1f29;
+  --color-surface-container-high: #262a34;
+  --color-surface-container-highest: #31353f;
+  
+  --color-primary: #e9feff;
+  --color-primary-container: #00f5ff;
+  --color-primary-fixed: #63f7ff;
+  --color-primary-fixed-dim: #00dce5;
+  
+  --color-secondary: #ffb1c3;
+  --color-secondary-container: #ff4b89;
+  --color-secondary-fixed: #ffd9e0;
+  
+  --color-tertiary: #efffe4;
+  --color-tertiary-container: #3bff17;
+  --color-tertiary-fixed: #79ff5b;
+
+  --color-on-surface: #dfe2ef;
+  --color-on-surface-variant: #b9caca;
+  --color-outline: #849495;
+  --color-outline-variant: #3a494a;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: #0f131c;
+    color: #dfe2ef;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline);
+  }
+}
+
+/* Custom Scanlines & Grid Effects */
+.scanlines-crt {
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.8) 100%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 50%, transparent 50%);
+  background-size: 100% 100%, 100% 4px;
+}
+
+.scanlines-retro {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 50%, transparent 50%);
+  background-size: 100% 8px;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+::-webkit-scrollbar-thumb {
+  background: #262a34;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f5ff;
+}
